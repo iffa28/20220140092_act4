@@ -34,7 +34,11 @@ class DetailOrderPage extends StatelessWidget {
 
             const SizedBox(height: 20),
             ElevatedButton(onPressed: () {
-              
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (context) => HomePage()),
+                (route) => false,
+              );
             }, child: const Text('Finish Order')),
           ],
         ),
