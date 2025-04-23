@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_routing_parsingparameter/login_page.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -48,7 +49,17 @@ class _RegisterPageState extends State<RegisterPage> {
                 },
               ),
               ElevatedButton(onPressed: () {}, child: Text('Register')),
-              TextButton(onPressed: (){}, child: Text('Sudah punya akun? Login Sekarang!')),
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, 'login');
+                  //Navigator.pop(context);
+                  //   Navigator.push(
+                  //     context,
+                  //     MaterialPageRoute(builder: (context) => LoginPage()));
+                  //
+                },
+                child: Text('Sudah punya akun? Login Sekarang!'),
+              ),
             ],
           ),
         ),
