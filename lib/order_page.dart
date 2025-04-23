@@ -35,6 +35,46 @@ class _OrderPageState extends State<OrderPage> {
         key: _formKey,
         child: Column(
           children: [
+            TextFormField(
+              controller: makananController,
+              decoration: const InputDecoration(labelText: 'Food Order'),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter food name';
+                }
+                return null;
+              },
+            ),
+            TextFormField(
+              controller: minumanController,
+              decoration: const InputDecoration(labelText: 'Drink Order'),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter drink name';
+                }
+                return null;
+              },
+            ),
+            TextFormField(
+              controller: jumlahMakananController,
+              decoration: const InputDecoration(labelText: 'Qty of Food Order'),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter yout qty of food order';
+                }
+                return null;
+              },
+            ),
+            TextFormField(
+              controller: jumlahMinumanController,
+              decoration: const InputDecoration(labelText: 'Qty of Drink Order'),
+              validator: (value) {
+                if (value == null || value.isEmpty) {
+                  return 'Please enter yout qty of drink order';
+                }
+                return null;
+              },
+            ),
             
           ]
         ),
