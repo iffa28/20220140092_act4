@@ -46,7 +46,8 @@ class _LoginPageState extends State<LoginPage> {
                   return null;
                 },
               ),
-              
+              ElevatedButton(onPressed: () {}, child: Text('Login')),
+              TextButton(onPressed: (){}, child: Text('Belum punya akun? Daftar')),
             ],
           ),
         ),
