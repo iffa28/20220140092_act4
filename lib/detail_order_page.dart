@@ -10,7 +10,11 @@ class DetailOrderPage extends StatelessWidget {
 
   const DetailOrderPage({
     super.key,
-    
+    required this.makanan,
+    required this.minuman,
+    required this.jumlahMakanan,
+    required this.jumlahMinuman,
+    required this.totalHarga,
   });
 
   @override
