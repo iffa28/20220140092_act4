@@ -27,6 +27,7 @@ class _LoginPageState extends State<LoginPage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextFormField(
+                controller: _emailController,
                 decoration: InputDecoration(labelText: 'Email'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
@@ -36,6 +37,7 @@ class _LoginPageState extends State<LoginPage> {
                 },
               ),
               TextFormField(
+                controller: _passwordController,
                 decoration: InputDecoration(labelText: 'Password'),
                 validator: (value) {
                   if (value == null || value.isEmpty) {
