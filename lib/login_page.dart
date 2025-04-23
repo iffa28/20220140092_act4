@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navigation_routing_parsingparameter/home_page.dart';
 import 'package:navigation_routing_parsingparameter/register_page.dart';
 
 class LoginPage extends StatefulWidget {
@@ -20,8 +21,10 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   Widget build(BuildContext context) {
+    final _formKey = GlobalKey<FormState>();
     return Scaffold(
       body: Form(
+        key: _formKey,
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -47,7 +50,15 @@ class _LoginPageState extends State<LoginPage> {
                   return null;
                 },
               ),
-              ElevatedButton(onPressed: () {}, child: Text('Login')),
+              ElevatedButton(onPressed: () {
+                if (_formKey.currentState!.validate()) {
+                  // Perform login action
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
+                }
+              }, child: Text('Login')),
               TextButton(
                 onPressed: () {
                   Navigator.push(
